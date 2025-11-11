@@ -1,0 +1,211 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+header.header_principal {
+  min-height: 100vh;
+  margin-bottom: 175px;
+
+  background-image: url("../img/imagen1.png"),
+    linear-gradient(
+      to right,
+      #000000 0%,
+      #000000 33.3%,
+      #ffffff 33.3%,
+      #ffffff 100%
+    );
+
+  background-position: center center, top left;
+
+  background-size: 33.3% 100%, cover;
+
+  background-repeat: no-repeat, no-repeat;
+
+  @include breakpoint(tablet) {
+  background-image: url("../img/imagen1.png");
+  min-height: auto;
+   
+  margin-bottom: 175px;
+
+
+  }
+
+  h1 {
+    color: white;
+    font-family: $title-font;
+    font-size: 130px;
+    font-weight: 900;
+    @include breakpoint(desktop) {
+      font-size: 100px;
+    }
+  }
+  p {
+    color: $gray;
+    @include breakpoint(desktop) {
+      max-width: 54%;
+      position: relative;
+      left: 163px;
+      top: 290px;
+      font-size: 24px;
+    }
+  }
+  .location-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+    height: 60px;
+    border-radius: 2px;
+    max-width: 26%;
+  }
+
+  .location-link .text {
+    background-color: #000;
+    color: #fff;
+    padding: 0 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: $title-font;
+  }
+
+  .location-link {
+    position: relative;
+    top: 375px;
+    left: 1212px;
+    @include breakpoint(desktop) {
+      max-width: 34%;
+      position: relative;
+      top: 420px;
+      left: 890px;
+    }
+  }
+
+  .location-link .flecha {
+    background-color: $orange;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .location-link:hover .flecha {
+    background-color: #a66f4f;
+  }
+
+  .location-link:hover .text {
+    opacity: 0.9;
+  }
+}
+.header_principal-text {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  h1 {
+    position: relative;
+    left: 284px;
+    top: 256px;
+    max-width: 64%;
+    line-height: 120px;
+    @include breakpoint(desktop) {
+      max-width: 65%;
+      left: 181px;
+      top: 305px;
+    }
+  }
+  p {
+    position: relative;
+    top: 256px;
+    left: 235px;
+    font-family: $subtitle-font;
+    font-size: 28px;
+    max-width: 46%;
+    line-height: 44px;
+  }
+}
+
+.header_maps {
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 900px;
+}
+
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  transition: filter 0.3s ease;
+  filter: grayscale(100%);
+}
+
+.map-container {
+  .localitation-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    overflow: hidden;
+
+    height: 60px;
+    border-radius: 2px;
+  }
+
+  .localitation-link .text {
+    background-color: #000;
+    color: #fff;
+    padding: 0 40px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-family: $title-font;
+  }
+
+  .localitation-link {
+    position: relative;
+    left: 324px;
+  }
+
+  .localitation-link .flecha {
+    background-color: $orange;
+    height: 100%;
+    width: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+
+  .localitation-link:hover .flecha {
+    background-color: #a66f4f;
+  }
+
+  .localitation-link:hover .text {
+    opacity: 0.9;
+  }
+}

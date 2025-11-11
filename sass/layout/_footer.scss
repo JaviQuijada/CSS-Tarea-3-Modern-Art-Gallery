@@ -1,0 +1,71 @@
+@use "../abstracts/variables" as *;
+
+.localitation {
+  background-color: $orange;
+  height: 350px;
+  display: flex;
+  justify-content: space-between;
+  &_logo {
+    img {
+      width: 250px;
+    }
+    margin-left: 200px;
+    margin-top: 120px;
+  }
+  &_parrafo {
+    font-family: $subtitle-font;
+    font-size: 28px;
+    max-width: 34%;
+    margin-top: 120px;
+    margin-right: 350px;
+  }
+  &_social {
+    position: relative;
+    right: 200px;
+    top: 150px;
+    height: 100px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 27px;
+      list-style: none;
+    }
+  }
+}
+
+
+.footer-principal {
+  background-color: black;
+  height: 250px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 100px;
+  
+  &_logo {
+    img {
+      width: 225px;
+    }
+    margin-left: 200px;
+    margin-top: 75px;
+  }
+  &_parrafo {
+    font-family: $subtitle-font;
+    color: white;
+    font-size: 20px;
+    max-width: 25%;
+    margin-top: 75px;
+    margin-right: 350px;
+  }
+  &_social {
+    position: relative;
+    right: 200px;
+    top: 75px;
+    height: 100px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 27px;
+      list-style: none;
+    }
+  }
+}
