@@ -138,10 +138,9 @@ header.header_principal {
 }
 @media (max-width: 480px) and (min-width: 320px) {
   header.header_principal {
-    background-color: #E5E6E8;
     background-image: url("../../img/imagen1.png");
-    background-size: 50%;
-    background-position: center top;
+    background-size: 100%;
+    background-position: top;
   }
 }
 header.header_principal h1 {
@@ -169,7 +168,7 @@ header.header_principal h1 {
 @media (max-width: 480px) and (min-width: 320px) {
   header.header_principal h1 {
     color: black;
-    font-size: 50px;
+    font-size: 52px;
     line-height: 45px;
     position: relative;
     left: 0;
@@ -201,7 +200,7 @@ header.header_principal p {
 }
 @media (max-width: 480px) and (min-width: 320px) {
   header.header_principal p {
-    max-width: 62%;
+    max-width: 77%;
     position: relative;
     left: 0;
     top: 0;
@@ -286,6 +285,9 @@ header.header_principal .location-link:hover .text {
 @media (max-width: 480px) and (min-width: 320px) {
   .header_principal-text {
     display: block;
+    position: relative;
+    top: 750px;
+    margin-left: 20px;
   }
 }
 .header_principal-text h1 {
@@ -300,6 +302,11 @@ header.header_principal .location-link:hover .text {
     max-width: 65%;
     left: 181px;
     top: 305px;
+  }
+}
+@media (max-width: 480px) and (min-width: 320px) {
+  .header_principal-text h1 {
+    margin-bottom: 20px;
   }
 }
 .header_principal-text p {
