@@ -1,0 +1,11 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+
+
+.contenedor-principal {
+    @include breakpoint(mobile) {
+        display: block;
+        max-width: 100%;
+    }
+}

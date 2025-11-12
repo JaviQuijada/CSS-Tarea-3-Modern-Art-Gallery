@@ -7,6 +7,12 @@ main.main_principal {
     margin-left: 50px;
     margin-right: -282px;
   }
+
+  @include breakpoint(mobile) {
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+  }
 }
 
 main.main_maps {

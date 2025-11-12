@@ -11,7 +11,9 @@
     @include breakpoint(desktop) {
       margin-left: -65px;
       gap: 0;
-
+    }
+    @include breakpoint(tablet) {
+      display: block;
     }
    
     &-texto {
@@ -77,8 +79,18 @@
         object-fit: cover;
         object-position: 53%
       }
+      @include breakpoint(mobile) {
+        position: relative;
+        left: -331px;
+        top: -189px;
+        max-width: 100%;
+        object-fit: cover;
+        background-size: cover;
+
+      }
     }
   }
+
   &_container-2 {
     display: flex;
     align-items: center;

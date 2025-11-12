@@ -125,7 +125,6 @@ header.header_principal {
 }
 @media (max-width: 1024px) and (min-width: 768px) {
   header.header_principal {
-    background-image: url("../../img/imagen1.png");
     background-color: #ffffff;
     background-size: 55%;
     background-position: top left;
@@ -138,9 +137,11 @@ header.header_principal {
 }
 @media (max-width: 480px) and (min-width: 320px) {
   header.header_principal {
-    background-image: url("../../img/imagen1.png");
     background-size: 100%;
     background-position: top;
+    background-image: url("../img/imagen1.png");
+    background-position-y: -177px;
+    background-position-x: -63px;
   }
 }
 header.header_principal h1 {
@@ -173,7 +174,7 @@ header.header_principal h1 {
     position: relative;
     left: 0;
     top: 0;
-    max-width: 50%;
+    max-width: 60%;
   }
 }
 header.header_principal p {
@@ -200,7 +201,7 @@ header.header_principal p {
 }
 @media (max-width: 480px) and (min-width: 320px) {
   header.header_principal p {
-    max-width: 77%;
+    max-width: 70%;
     position: relative;
     left: 0;
     top: 0;
@@ -284,10 +285,12 @@ header.header_principal .location-link:hover .text {
 }
 @media (max-width: 480px) and (min-width: 320px) {
   .header_principal-text {
+    background-color: white;
     display: block;
     position: relative;
-    top: 750px;
-    margin-left: 20px;
+    top: 338px;
+    padding-top: 30px;
+    padding-left: 20px;
   }
 }
 .header_principal-text h1 {
@@ -317,6 +320,11 @@ header.header_principal .location-link:hover .text {
   font-size: 28px;
   max-width: 46%;
   line-height: 44px;
+}
+@media (max-width: 480px) and (min-width: 320px) {
+  .header_principal-text p {
+    margin-bottom: 20px;
+  }
 }
 
 .header_maps {
@@ -411,6 +419,11 @@ header.header_principal .location-link:hover .text {
     gap: 0;
   }
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero_container-1 {
+    display: block;
+  }
+}
 .hero_container-1-texto {
   max-width: 26%;
   margin-left: 0;
@@ -485,6 +498,16 @@ header.header_principal .location-link:hover .text {
     height: 400px;
     object-fit: cover;
     object-position: 53%;
+  }
+}
+@media (max-width: 480px) and (min-width: 320px) {
+  .hero_container-1-img {
+    position: relative;
+    left: -331px;
+    top: -189px;
+    max-width: 100%;
+    object-fit: cover;
+    background-size: cover;
   }
 }
 .hero_container-2 {
@@ -595,6 +618,13 @@ main.main_principal {
     margin-right: -282px;
   }
 }
+@media (max-width: 480px) and (min-width: 320px) {
+  main.main_principal {
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+  }
+}
 
 main.main_maps {
   background-color: black;
@@ -679,6 +709,13 @@ main.main_maps p.description {
     margin-left: 450px;
     max-width: 43%;
     line-height: 30px;
+  }
+}
+
+@media (max-width: 480px) and (min-width: 320px) {
+  .contenedor-principal {
+    display: block;
+    max-width: 100%;
   }
 }
 
