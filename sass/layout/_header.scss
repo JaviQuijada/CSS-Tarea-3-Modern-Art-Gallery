@@ -1,6 +1,8 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
 
+
+
 header.header_principal {
   min-height: 100vh;
   margin-bottom: 175px;
@@ -21,12 +23,24 @@ header.header_principal {
   background-repeat: no-repeat, no-repeat;
 
   @include breakpoint(tablet) {
-  background-image: url("../img/imagen1.png");
-  min-height: auto;
-   
-  margin-bottom: 175px;
+    background-image: url("../../img/imagen1.png");
+    background-color: #ffffff;
+    background-size: 55%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
 
+    min-height: 47vh;
+    min-width: 113%;
+    margin-bottom: 90px;
+  }
 
+  @include breakpoint(mobile) {
+    background-color: #E5E6E8;
+    background-image: url("../../img/imagen1.png");
+    background-size: 50%;
+    background-position: center top;
+ 
   }
 
   h1 {
@@ -34,8 +48,32 @@ header.header_principal {
     font-family: $title-font;
     font-size: 130px;
     font-weight: 900;
+
     @include breakpoint(desktop) {
       font-size: 100px;
+
+    }
+
+    @include breakpoint(tablet) {
+      font-size: 70px;
+      color: black;
+      line-height: 76px;
+      position: relative;
+      left: 587px;
+      top: 264px;
+      max-width: 57%
+      
+    }
+
+    @include breakpoint(mobile) {
+      color: black;
+      font-size: 50px;
+      line-height: 45px;
+      position: relative;
+      left: 0;
+      top: 0;
+      max-width: 50%;
+
     }
   }
   p {
@@ -46,6 +84,22 @@ header.header_principal {
       left: 163px;
       top: 290px;
       font-size: 24px;
+    }
+    @include breakpoint(tablet) {
+      max-width:62%;
+      position: relative;
+      left: 8px;
+      top: 468px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+    @include breakpoint(mobile) {
+      max-width:62%;
+      position: relative;
+      left: 0;
+      top: 0;
+      font-size: 18px;
+      line-height: 25px;
     }
   }
   .location-link {
@@ -85,6 +139,18 @@ header.header_principal {
       top: 420px;
       left: 890px;
     }
+    @include breakpoint(tablet) {
+      max-width: 50%;
+      position: relative;
+      top: 522px;
+      left: 589px;
+    }
+    @include breakpoint(mobile) {
+      max-width: 50%;
+      position: relative;
+      top: 0;
+      left: 0;
+    }
   }
 
   .location-link .flecha {
@@ -108,6 +174,10 @@ header.header_principal {
 .header_principal-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @include breakpoint(mobile) {
+    display: block;
+  }
   h1 {
     position: relative;
     left: 284px;
@@ -138,6 +208,8 @@ header.header_principal {
   align-items: center;
   max-width: 100%;
   height: 900px;
+ 
+  
 }
 
 .map-container {
@@ -145,6 +217,13 @@ header.header_principal {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  @include breakpoint(tablet) {
+    position:relative;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+
+  }
 }
 
 .map-container iframe {

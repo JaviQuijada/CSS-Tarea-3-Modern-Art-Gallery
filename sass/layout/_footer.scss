@@ -1,16 +1,22 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .localitation {
   background-color: $orange;
   height: 350px;
   display: flex;
   justify-content: space-between;
+  @include breakpoint(tablet) {
+    height: 277px;
+  }
   &_logo {
-    img {
-      width: 250px;
-    }
     margin-left: 200px;
     margin-top: 120px;
+    width: 250px;
+    @include breakpoint(tablet) {
+      margin-left: 75px;
+      margin-top: 100px;
+    }
   }
   &_parrafo {
     font-family: $subtitle-font;
@@ -18,12 +24,24 @@
     max-width: 34%;
     margin-top: 120px;
     margin-right: 350px;
+    @include breakpoint(tablet) {
+      font-size: 16px;
+      margin-left: -191px;
+      margin-top: 80px;
+      line-height: 30px;
+      margin-right: 00px;
+      max-width: 27%;
+    }
   }
   &_social {
     position: relative;
     right: 200px;
     top: 150px;
     height: 100px;
+    @include breakpoint(tablet) {
+      right: 70px;
+      top: 94px;
+    }
     ul {
       display: flex;
       flex-direction: row;
@@ -33,20 +51,22 @@
   }
 }
 
-
 .footer-principal {
   background-color: black;
   height: 250px;
   display: flex;
   justify-content: space-evenly;
   gap: 100px;
-  
+
   &_logo {
-    img {
-      width: 225px;
-    }
+    width: 225px;
     margin-left: 200px;
     margin-top: 75px;
+    @include breakpoint(tablet) {
+      width: 225px;
+      margin-left: 100px;
+      margin-top: 75px;
+    }
   }
   &_parrafo {
     font-family: $subtitle-font;
@@ -55,12 +75,20 @@
     max-width: 25%;
     margin-top: 75px;
     margin-right: 350px;
+    @include breakpoint(tablet) {
+      font-size: 16px;
+      max-width: 28%;
+      margin-right: 166px;
+    }
   }
   &_social {
     position: relative;
     right: 200px;
     top: 75px;
     height: 100px;
+    @include breakpoint(tablet) {
+      right: 100px;
+    }
     ul {
       display: flex;
       flex-direction: row;

@@ -1,8 +1,12 @@
 @use "../abstracts/variables" as *;
-
+@use "../abstracts/mixins" as *;
 
 main.main_principal {
   margin-left: 284px;
+  @include breakpoint(tablet) {
+    margin-left: 50px;
+    margin-right: -282px;
+  }
 }
 
 main.main_maps {
@@ -13,6 +17,10 @@ main.main_maps {
   aspect-ratio: 16 / 9;
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  @include breakpoint(tablet) {
+    height: 600px;
+  }
+
   h1 {
     color: rgb(255, 255, 255);
     font-family: $title-font;
@@ -22,6 +30,12 @@ main.main_maps {
     position: relative;
     margin-top: 144px;
     margin-left: 230px;
+    @include breakpoint(tablet) {
+      font-size: 70px;
+      margin-top: 144px;
+      margin-left: 80px;
+      line-height: 78px;
+    }
   }
   h3 {
     font-size: 55px;
@@ -30,6 +44,11 @@ main.main_maps {
     position: relative;
     margin-top: -244px;
     margin-left: 1000px;
+    @include breakpoint(tablet) {
+      font-size: 50px;
+      margin-top: -165px;
+      margin-left: 450px;
+    }
   }
   p.address {
     font-family: $subtitle-font;
@@ -40,7 +59,12 @@ main.main_maps {
     position: relative;
     margin-top: 34px;
     margin-left: 1000px;
-
+    @include breakpoint(tablet) {
+      font-size: 20px;
+      line-height: 29px;
+      margin-top: 34px;
+      margin-left: 450px;
+    }
   }
 
   p.description {
@@ -53,8 +77,13 @@ main.main_maps {
     position: relative;
     margin-top: 34px;
     margin-left: 1000px;
+    @include breakpoint(tablet) {
+      font-size: 20px;
+      margin-top: 34px;
+      margin-left: 450px;
+      max-width: 43%;
+      line-height: 30px;
 
-
+    }
   }
-  
 }

@@ -11,12 +11,21 @@
   display: flex;
   justify-content: space-between;
 }
-.localitation_logo img {
-  width: 250px;
+@media (max-width: 1024px) and (min-width: 768px) {
+  .localitation {
+    height: 277px;
+  }
 }
 .localitation_logo {
   margin-left: 200px;
   margin-top: 120px;
+  width: 250px;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .localitation_logo {
+    margin-left: 75px;
+    margin-top: 100px;
+  }
 }
 .localitation_parrafo {
   font-family: "Outfit", sans-serif;
@@ -25,11 +34,27 @@
   margin-top: 120px;
   margin-right: 350px;
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  .localitation_parrafo {
+    font-size: 16px;
+    margin-left: -191px;
+    margin-top: 80px;
+    line-height: 30px;
+    margin-right: 0px;
+    max-width: 27%;
+  }
+}
 .localitation_social {
   position: relative;
   right: 200px;
   top: 150px;
   height: 100px;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .localitation_social {
+    right: 70px;
+    top: 94px;
+  }
 }
 .localitation_social ul {
   display: flex;
@@ -45,12 +70,17 @@
   justify-content: space-evenly;
   gap: 100px;
 }
-.footer-principal_logo img {
-  width: 225px;
-}
 .footer-principal_logo {
+  width: 225px;
   margin-left: 200px;
   margin-top: 75px;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .footer-principal_logo {
+    width: 225px;
+    margin-left: 100px;
+    margin-top: 75px;
+  }
 }
 .footer-principal_parrafo {
   font-family: "Outfit", sans-serif;
@@ -60,11 +90,23 @@
   margin-top: 75px;
   margin-right: 350px;
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  .footer-principal_parrafo {
+    font-size: 16px;
+    max-width: 28%;
+    margin-right: 166px;
+  }
+}
 .footer-principal_social {
   position: relative;
   right: 200px;
   top: 75px;
   height: 100px;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .footer-principal_social {
+    right: 100px;
+  }
 }
 .footer-principal_social ul {
   display: flex;
@@ -83,9 +125,23 @@ header.header_principal {
 }
 @media (max-width: 1024px) and (min-width: 768px) {
   header.header_principal {
-    background-image: url("../img/imagen1.png");
-    min-height: auto;
-    margin-bottom: 175px;
+    background-image: url("../../img/imagen1.png");
+    background-color: #ffffff;
+    background-size: 55%;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-blend-mode: normal;
+    min-height: 47vh;
+    min-width: 113%;
+    margin-bottom: 90px;
+  }
+}
+@media (max-width: 480px) and (min-width: 320px) {
+  header.header_principal {
+    background-color: #E5E6E8;
+    background-image: url("../../img/imagen1.png");
+    background-size: 50%;
+    background-position: center top;
   }
 }
 header.header_principal h1 {
@@ -99,6 +155,28 @@ header.header_principal h1 {
     font-size: 100px;
   }
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  header.header_principal h1 {
+    font-size: 70px;
+    color: black;
+    line-height: 76px;
+    position: relative;
+    left: 587px;
+    top: 264px;
+    max-width: 57%;
+  }
+}
+@media (max-width: 480px) and (min-width: 320px) {
+  header.header_principal h1 {
+    color: black;
+    font-size: 50px;
+    line-height: 45px;
+    position: relative;
+    left: 0;
+    top: 0;
+    max-width: 50%;
+  }
+}
 header.header_principal p {
   color: #444444;
 }
@@ -109,6 +187,26 @@ header.header_principal p {
     left: 163px;
     top: 290px;
     font-size: 24px;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  header.header_principal p {
+    max-width: 62%;
+    position: relative;
+    left: 8px;
+    top: 468px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+@media (max-width: 480px) and (min-width: 320px) {
+  header.header_principal p {
+    max-width: 62%;
+    position: relative;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 header.header_principal .location-link {
@@ -149,6 +247,22 @@ header.header_principal .location-link {
     left: 890px;
   }
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  header.header_principal .location-link {
+    max-width: 50%;
+    position: relative;
+    top: 522px;
+    left: 589px;
+  }
+}
+@media (max-width: 480px) and (min-width: 320px) {
+  header.header_principal .location-link {
+    max-width: 50%;
+    position: relative;
+    top: 0;
+    left: 0;
+  }
+}
 header.header_principal .location-link .flecha {
   background-color: #d5966c;
   height: 100%;
@@ -168,6 +282,11 @@ header.header_principal .location-link:hover .text {
 .header_principal-text {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+@media (max-width: 480px) and (min-width: 320px) {
+  .header_principal-text {
+    display: block;
+  }
 }
 .header_principal-text h1 {
   position: relative;
@@ -207,6 +326,14 @@ header.header_principal .location-link:hover .text {
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .map-container {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+  }
 }
 
 .map-container iframe {
@@ -288,6 +415,7 @@ header.header_principal .location-link:hover .text {
   .hero_container-1-texto {
     max-width: 29%;
     margin-left: 0;
+    font-weight: 900;
   }
 }
 .hero_container-1-texto-title {
@@ -303,6 +431,16 @@ header.header_principal .location-link:hover .text {
     font-size: 55px;
   }
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero_container-1-texto-title {
+    font-size: 50px;
+    line-height: 45px;
+    font-weight: 900;
+    position: relative;
+    bottom: 45px;
+    left: 45px;
+  }
+}
 .hero_container-1-texto-subtitle {
   font-family: "Outfit", sans-serif;
   font-size: 26px;
@@ -315,6 +453,16 @@ header.header_principal .location-link:hover .text {
     max-width: 97%;
   }
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero_container-1-texto-subtitle {
+    font-size: 18px;
+    line-height: 30x;
+    max-width: 93%;
+    position: relative;
+    bottom: 10px;
+    left: 45px;
+  }
+}
 .hero_container-1-img {
   margin-left: 115px;
   max-width: 47%;
@@ -322,6 +470,14 @@ header.header_principal .location-link:hover .text {
 @media (max-width: 1440px) and (min-width: 1025px) {
   .hero_container-1-img {
     margin-left: 115px;
+  }
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero_container-1-img {
+    width: 419px;
+    height: 400px;
+    object-fit: cover;
+    object-position: 53%;
   }
 }
 .hero_container-2 {
@@ -337,11 +493,31 @@ header.header_principal .location-link:hover .text {
     margin-left: -60px;
   }
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero_container-2 {
+    gap: 10px;
+  }
+}
 .hero_container-2-banco {
   max-width: 47%;
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero_container-2-banco {
+    margin-left: 42px;
+    width: 541px;
+    height: 800px;
+    object-fit: cover;
+    object-position: 50%;
+  }
+}
 .hero_container-2-block {
   max-width: 33%;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero_container-2-block {
+    height: 40vh;
+    width: 24%;
+  }
 }
 .hero_container-2-block-texto {
   height: 488px;
@@ -355,6 +531,12 @@ header.header_principal .location-link:hover .text {
     padding: 60px 40px;
   }
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero_container-2-block-texto {
+    max-height: 57%;
+    padding: 90px 40px;
+  }
+}
 .hero_container-2-block-texto-title {
   font-size: 65px;
   font-family: "Big Shoulders", sans-serif;
@@ -366,6 +548,11 @@ header.header_principal .location-link:hover .text {
     margin-bottom: 30px;
   }
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero_container-2-block-texto-title {
+    font-size: 50px;
+  }
+}
 .hero_container-2-block-texto-subtitle {
   font-size: 26px;
   font-family: "Outfit", sans-serif;
@@ -375,12 +562,31 @@ header.header_principal .location-link:hover .text {
     font-size: 18px;
   }
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero_container-2-block-texto-subtitle {
+    font-size: 18px;
+    font-weight: 100;
+  }
+}
 .hero_container-2-block-pasillo {
   max-width: 100%;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  .hero_container-2-block-pasillo {
+    height: 43%;
+    object-fit: cover;
+    object-position: 50% 80%;
+  }
 }
 
 main.main_principal {
   margin-left: 284px;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  main.main_principal {
+    margin-left: 50px;
+    margin-right: -282px;
+  }
 }
 
 main.main_maps {
@@ -392,6 +598,11 @@ main.main_maps {
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  main.main_maps {
+    height: 600px;
+  }
+}
 main.main_maps h1 {
   color: rgb(255, 255, 255);
   font-family: "Big Shoulders", sans-serif;
@@ -402,6 +613,14 @@ main.main_maps h1 {
   margin-top: 144px;
   margin-left: 230px;
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  main.main_maps h1 {
+    font-size: 70px;
+    margin-top: 144px;
+    margin-left: 80px;
+    line-height: 78px;
+  }
+}
 main.main_maps h3 {
   font-size: 55px;
   font-family: "Big Shoulders", sans-serif;
@@ -409,6 +628,13 @@ main.main_maps h3 {
   position: relative;
   margin-top: -244px;
   margin-left: 1000px;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  main.main_maps h3 {
+    font-size: 50px;
+    margin-top: -165px;
+    margin-left: 450px;
+  }
 }
 main.main_maps p.address {
   font-family: "Outfit", sans-serif;
@@ -420,6 +646,14 @@ main.main_maps p.address {
   margin-top: 34px;
   margin-left: 1000px;
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+  main.main_maps p.address {
+    font-size: 20px;
+    line-height: 29px;
+    margin-top: 34px;
+    margin-left: 450px;
+  }
+}
 main.main_maps p.description {
   max-width: 38%;
   font-family: "Outfit", sans-serif;
@@ -430,6 +664,15 @@ main.main_maps p.description {
   position: relative;
   margin-top: 34px;
   margin-left: 1000px;
+}
+@media (max-width: 1024px) and (min-width: 768px) {
+  main.main_maps p.description {
+    font-size: 20px;
+    margin-top: 34px;
+    margin-left: 450px;
+    max-width: 43%;
+    line-height: 30px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
