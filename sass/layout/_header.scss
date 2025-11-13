@@ -35,12 +35,10 @@ header.header_principal {
   }
 
   @include breakpoint(mobile) {
-    width: 710px;
-    background-size:710px;
-
+    width: 480px;
+    background-size:500px;
     background-image: url("../img/imagen1.png");
     background-position-y: -177px;
-    background-position-x: 0;
   }
 
   h1 {
@@ -70,6 +68,7 @@ header.header_principal {
       left: 0;
       top: 0;
       max-width: 60%;
+      
     }
   }
   p {
@@ -172,7 +171,6 @@ header.header_principal {
   grid-template-columns: 1fr 1fr;
 
   @include breakpoint(mobile) {
-    background-color: white;
     display: block;
     position: relative;
     top: 338px;
@@ -185,6 +183,7 @@ header.header_principal {
     top: 256px;
     max-width: 64%;
     line-height: 120px;
+
     @include breakpoint(desktop) {
       max-width: 65%;
       left: 181px;
@@ -192,6 +191,7 @@ header.header_principal {
     }
     @include breakpoint(mobile) {
       margin-bottom: 20px;
+      
     }
   }
   p {

@@ -138,11 +138,10 @@ header.header_principal {
 }
 @media (max-width: 480px) and (min-width: 320px) {
   header.header_principal {
-    width: 710px;
-    background-size: 710px;
+    width: 480px;
+    background-size: 500px;
     background-image: url("../img/imagen1.png");
     background-position-y: -177px;
-    background-position-x: 0;
   }
 }
 header.header_principal h1 {
@@ -286,7 +285,6 @@ header.header_principal .location-link:hover .text {
 }
 @media (max-width: 480px) and (min-width: 320px) {
   .header_principal-text {
-    background-color: white;
     display: block;
     position: relative;
     top: 338px;
