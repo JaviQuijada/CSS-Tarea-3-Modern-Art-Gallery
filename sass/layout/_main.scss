@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as *;
 
 main.main_principal {
-  margin-left: 284px;
+  margin-left: 206px;
   @include breakpoint(tablet) {
     margin-left: 50px;
     margin-right: -282px;

@@ -75,6 +75,7 @@
     max-width: 25%;
     margin-top: 75px;
     margin-right: 350px;
+    font-weight: 300;
     @include breakpoint(tablet) {
       font-size: 16px;
       max-width: 28%;

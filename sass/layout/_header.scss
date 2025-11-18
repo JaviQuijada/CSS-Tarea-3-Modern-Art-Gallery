@@ -16,9 +16,12 @@ header.header_principal {
 
   background-position: center center, top left;
 
-  background-size: 33.3% 100%, cover;
+  background-size: 42.3% 100%, cover;
 
   background-repeat: no-repeat, no-repeat;
+  @include breakpoint(desktop) {
+    background-size: 44.3% 100%, cover;
+  }
 
   @include breakpoint(tablet) {
     background-image: url("../img/imagen1.png");
@@ -36,103 +39,105 @@ header.header_principal {
 
   @include breakpoint(mobile) {
     width: 480px;
-    background-size:500px;
+    background-size: 500px;
     background-image: url("../img/imagen1.png");
     background-position-y: -177px;
   }
-
-  h1 {
-    color: white;
-    font-family: $title-font;
-    font-size: 130px;
-    font-weight: 900;
-    @include breakpoint(desktop) {
-      font-size: 100px;
-    }
-
-    @include breakpoint(tablet) {
-      font-size: 70px;
-      color: black;
-      line-height: 76px;
+  .header_principal-text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &-title {
+      color: white;
+      font-family: $title-font;
+      font-size: 130px;
+      font-weight: 900;
       position: relative;
-      left: 587px;
-      top: 264px;
-      max-width: 57%;
-    }
+      left: 168px;
+      top: 256px;
+      max-width: 64%;
+      line-height: 120px;
+      @include breakpoint(desktop) {
+        font-size: 100px;
+        line-height: 94px;
+        max-width: 65%;
+        left: 102px;
+        top: 216px;
+      }
 
-    @include breakpoint(mobile) {
-      color: black;
-      font-size: 52px;
-      line-height: 45px;
+      @include breakpoint(tablet) {
+        font-size: 70px;
+        color: black;
+        line-height: 76px;
+        position: relative;
+        left: 587px;
+        top: 264px;
+        max-width: 57%;
+      }
+
+      @include breakpoint(mobile) {
+        color: black;
+        font-size: 52px;
+        line-height: 45px;
+        position: relative;
+        left: 0;
+        top: 0;
+        max-width: 60%;
+        display: block;
+        position: relative;
+        top: 338px;
+        padding-top: 30px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+      }
+    }
+    &-subtitle {
+      color: $gray;
       position: relative;
-      left: 0;
-      top: 0;
-      max-width: 60%;
-      
+      top: 256px;
+      left: 323px;
+      font-family: $subtitle-font;
+      font-size: 28px;
+      max-width: 46%;
+      line-height: 44px;
+      @include breakpoint(desktop) {
+        max-width: 54%;
+        position: relative;
+        left: 249px;
+        top: 214px;
+        font-size: 24px;
+        line-height: 39px;
+      }
+      @include breakpoint(tablet) {
+        max-width: 62%;
+        position: relative;
+        left: 8px;
+        top: 468px;
+        font-size: 18px;
+        line-height: 30px;
+      }
+      @include breakpoint(mobile) {
+        max-width: 70%;
+        position: relative;
+        left: 0;
+        top: 0;
+        font-size: 18px;
+        line-height: 25px;
+        margin-bottom: 20px;
+      }
     }
   }
-  p {
-    color: $gray;
-    @include breakpoint(desktop) {
-      max-width: 54%;
-      position: relative;
-      left: 163px;
-      top: 290px;
-      font-size: 24px;
-    }
-    @include breakpoint(tablet) {
-      max-width: 62%;
-      position: relative;
-      left: 8px;
-      top: 468px;
-      font-size: 18px;
-      line-height: 30px;
-    }
-    @include breakpoint(mobile) {
-      max-width: 70%;
-      position: relative;
-      left: 0;
-      top: 0;
-      font-size: 18px;
-      line-height: 25px;
-    }
-  }
+
   .location-link {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    font-family: "Oswald", sans-serif;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    cursor: pointer;
-    overflow: hidden;
-    height: 60px;
-    border-radius: 2px;
-    max-width: 26%;
-  }
-
-  .location-link .text {
-    background-color: #000;
-    color: #fff;
-    padding: 0 40px;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-family: $title-font;
-  }
-
-  .location-link {
+    display: inline-flex;    text-decoration: none;
+    height: 80px;
+    max-width: 57%;
     position: relative;
-    top: 375px;
-    left: 1212px;
+    top: 315px;
+    left: 1277px;
     @include breakpoint(desktop) {
-      max-width: 34%;
-      position: relative;
-      top: 420px;
-      left: 890px;
+      max-width: 66%;
+      top: 267px;
+      left: 976px;
     }
     @include breakpoint(tablet) {
       max-width: 50%;
@@ -148,9 +153,25 @@ header.header_principal {
     }
   }
 
+  .location-link .text {
+    background-color: #000;
+    color: #fff;
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-family: $title-font;
+    font-weight: 500;
+    width: 50%;
+    letter-spacing:4px;
+    @include breakpoint(desktop) {
+      font-size: 23px;
+    }
+  }
+
   .location-link .flecha {
     background-color: $orange;
-    height: 100%;
     width: 60px;
     display: flex;
     align-items: center;
@@ -164,47 +185,6 @@ header.header_principal {
 
   .location-link:hover .text {
     opacity: 0.9;
-  }
-}
-.header_principal-text {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-
-  @include breakpoint(mobile) {
-    display: block;
-    position: relative;
-    top: 338px;
-    padding-top: 30px;
-    padding-left: 20px;
-  }
-  h1 {
-    position: relative;
-    left: 284px;
-    top: 256px;
-    max-width: 64%;
-    line-height: 120px;
-
-    @include breakpoint(desktop) {
-      max-width: 65%;
-      left: 181px;
-      top: 305px;
-    }
-    @include breakpoint(mobile) {
-      margin-bottom: 20px;
-      
-    }
-  }
-  p {
-    position: relative;
-    top: 256px;
-    left: 235px;
-    font-family: $subtitle-font;
-    font-size: 28px;
-    max-width: 46%;
-    line-height: 44px;
-    @include breakpoint(mobile) {
-      margin-bottom: 20px;
-    }
   }
 }
 
