@@ -3,9 +3,13 @@
 
 main.main_principal {
   margin-left: 206px;
+  @include breakpoint(smalldesktop) {
+    margin-left: 112px;
+  }
   @include breakpoint(tablet) {
-    margin-left: 50px;
+    margin-left: 79px;
     margin-right: -282px;
+    max-width: 100%;
   }
 
   @include breakpoint(mobile) {
@@ -89,7 +93,6 @@ main.main_maps {
       margin-left: 450px;
       max-width: 43%;
       line-height: 30px;
-
     }
   }
 }

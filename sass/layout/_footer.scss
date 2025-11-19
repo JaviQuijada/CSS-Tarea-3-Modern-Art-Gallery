@@ -57,13 +57,26 @@
   display: flex;
   justify-content: space-evenly;
   gap: 100px;
+  @include breakpoint(smalldesktop) {
+    height: 211px;
+  }
+  @include breakpoint(tablet) {
+    height: 254px;
+  }
 
   &_logo {
     width: 225px;
     margin-left: 200px;
     margin-top: 75px;
+    @include breakpoint(desktop) {
+      margin-left: 124px;
+    }
+    @include breakpoint(smalldesktop) {
+      margin-left: 200px;
+      margin-top: 60px;
+    }
     @include breakpoint(tablet) {
-      width: 225px;
+      width: 17%;
       margin-left: 100px;
       margin-top: 75px;
     }
@@ -76,15 +89,30 @@
     margin-top: 75px;
     margin-right: 350px;
     font-weight: 300;
+    @include breakpoint(desktop) {
+      max-width: 33%;
+      font-weight: 300;
+      margin-right: 180px;
+    }
+    @include breakpoint(smalldesktop) {
+      max-width: 33%;
+      font-weight: 300;
+      margin-right: 180px;
+      font-size: 16px;
+      margin-top: 63px;
+    }
     @include breakpoint(tablet) {
       font-size: 16px;
       max-width: 28%;
       margin-right: 166px;
+      font-weight: 100;
+      position: relative;
+      bottom: 19px;
     }
   }
   &_social {
     position: relative;
-    right: 200px;
+    right: 90px;
     top: 75px;
     height: 100px;
     @include breakpoint(tablet) {
@@ -95,6 +123,13 @@
       flex-direction: row;
       gap: 27px;
       list-style: none;
+    }
+    img {
+      width: 30px;
+      @include breakpoint(tablet) {
+        width: 17px;
+
+      }
     }
   }
 }
