@@ -6,11 +6,17 @@ main.main_principal {
   @include breakpoint(smalldesktop) {
     margin-left: 112px;
   }
+   @include breakpoint(desktop) {
+     margin-left: 100px;
+  }
   @include breakpoint(tablet) {
     margin-left: 79px;
-    margin-right: -282px;
     max-width: 100%;
   }
+  @include breakpoint(tabletvertical) {
+    margin-left: 51px;
+  }
+  
 
   @include breakpoint(mobile) {
     margin-left: 0;

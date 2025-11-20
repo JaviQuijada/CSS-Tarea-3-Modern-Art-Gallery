@@ -9,7 +9,7 @@
     gap: 30px;
     margin-bottom: 50px;
     @include breakpoint(desktop) {
-      margin-left: -65px;
+      margin-left: -0;
       gap: 0;
     }
     @include breakpoint(tablet) {
@@ -17,6 +17,12 @@
       position: relative;
       top: 0;
       gap: 0;
+      margin-bottom: 0px;
+    }
+    @include breakpoint(mobile) {
+      justify-content: space-between;
+      width: 375px;
+      overflow-x: hidden;
     }
 
     &-texto {
@@ -35,6 +41,9 @@
         margin-left: -0;
         font-weight: 900;
       }
+      @include breakpoint(tabletvertical) {
+        max-width: 35%;
+      }
 
       &-title {
         position: relative;
@@ -45,7 +54,7 @@
         max-width: 85%;
         line-height: 70px;
         @include breakpoint(desktop) {
-          font-size: 55px;
+          font-size: 64px;
           font-weight: 900;
         }
         @include breakpoint(smalldesktop) {
@@ -62,12 +71,15 @@
           bottom: 49px;
         }  
         @include breakpoint(tabletvertical) {
-          font-size: 49px;
-          line-height: 51px;
-          font-weight: 700;
+          font-size: 59px;
+          line-height: 53px;
           max-width: 100%;
-          bottom: 49px;
+          bottom: 13px;
+          font-weight: 900;
+          margin-bottom: 31px;
+
         }
+
       }
       &-subtitle {
         font-family: $subtitle-font;
@@ -76,7 +88,7 @@
         color: $gray;
         max-width: 100%;
         @include breakpoint(desktop) {
-          font-size: 20px;
+          font-size: 23px;
           max-width: 85%;
         }
         @include breakpoint(smalldesktop) {
@@ -92,11 +104,10 @@
           bottom: 20px;
         }    
         @include breakpoint(tabletvertical) {
-          font-size: 15px;
+          font-size: 20px;
           line-height: 22px;
-          max-width: 93%;
+          max-width: 100%;
           position: relative;
-          bottom: 20px;
         }
       }
     }
@@ -105,8 +116,8 @@
       margin-left: 152px;
       max-width: 52%;
       @include breakpoint(desktop) {
-        margin-left: 115px;
-        max-width: 59%;
+        margin-left: 142px;
+        max-width: 53%;
       }
       @include breakpoint(smalldesktop) {
         max-width: 52%;
@@ -120,11 +131,11 @@
         margin-left: 112px;
       }   
       @include breakpoint(tabletvertical) {
-        width: 374px;
-        height: 373px;
+        width: 372px;
+        height: 372px;
         object-fit: cover;
         object-position: 53%;
-        margin-left: 89px;
+        margin-left: 65px;
       }
       @include breakpoint(mobile) {
         position: relative;
@@ -133,6 +144,8 @@
         max-width: 100%;
         object-fit: cover;
         background-size: cover;
+        margin-left: 0;
+        max-width: 50%;
       }
     }
   }
@@ -144,11 +157,10 @@
     gap: 40px;
     margin-bottom: 200px;
     @include breakpoint(desktop) {
-      gap: 45px;
-      margin-left: 0;
+         
     }
     @include breakpoint(smalldesktop) {
-      gap: 30px;
+      gap: 0;
       margin-left: 0;
     }
     @include breakpoint(tablet) {
@@ -156,29 +168,59 @@
       margin-bottom: 100px;
 
     }
+    @include breakpoint(tabletvertical) {
+      margin-bottom: 80px;
+      max-height: 75vh;
+
+    }
+  
 
     &-banco {
       max-width: 50%;
       @include breakpoint(desktop) {
-        max-width: 57%;
+        max-width: 53%;
       }
       @include breakpoint(smalldesktop) {
         max-width: 54%;
       }
       @include breakpoint(tablet) {
         margin-left: 0;
-        width: 501px;
+        width: 473px;
         height: 740px;
         object-fit: cover;
         object-position: 50%;
       }
+      @include breakpoint(tabletvertical) {
+        max-height: 62vh;
+        min-width: 57%; 
+    
+      }
+   
     }
 
     &-block {
       max-width: 36%;
+      @include breakpoint(desktop) {
+        max-width: 34%;
+
+      }
+
+      @include breakpoint(smalldesktop) {
+        margin-left: 23px;
+      }
       @include breakpoint(tablet) {
         height: 109vh;
-        width: 55%;
+        width: 110vh;
+        position: relative;
+        left: 26px;
+      }
+      @include breakpoint(tabletvertical) {
+        height: 64vh;
+        left: 0;
+        top: 8px;
+     
+        max-width: 27vh;
+     
       }
 
       &-texto {
@@ -187,7 +229,8 @@
         background-color: black;
         padding: 90px 60px;
         @include breakpoint(desktop) {
-          height: 446px;
+          width: 493px;
+          height: 431px;
           padding: 60px 40px;
         }
         @include breakpoint(smalldesktop) {
@@ -199,11 +242,17 @@
           padding: 90px 40px;
 
         }
+        @include breakpoint(tabletvertical) {
+          padding: 58px 27px;
+          max-height: 60%;
+          position: relative;
+          bottom: 27px;
+        }
 
         &-title {
-          font-size: 65px;
+          font-size: 80px;
           font-family: $title-font;
-          margin-bottom: 40px;
+          margin-bottom: 30px;
           font-weight: 900;
           @include breakpoint(desktop) {
             font-size: 55px;
@@ -219,6 +268,7 @@
         }
         &-subtitle {
           font-size: 26px;
+          max-width: 83%;
           font-family: $subtitle-font;
           font-weight: 100;
           @include breakpoint(desktop) {
@@ -231,11 +281,18 @@
             font-size: 18px;
             font-weight: 100;
           }
+          @include breakpoint(tabletvertical) {
+            max-width: 100%;
+          }
         }
       }
       &-pasillo {
         max-width: 100%;
         margin-bottom: 35px;
+        @include breakpoint(desktop) {
+          margin-bottom: 23px;
+          max-width: 108%;
+        }
         @include breakpoint(smalldesktop) {
           margin-bottom: 30px;
         }
@@ -247,7 +304,16 @@
           position: relative;
           top: 51px;
         }
+        @include breakpoint(tabletvertical) {
+          max-height: 23vh;
+          max-width: 30vh;
+          top: 0;
+          margin-bottom: 30px;
+          
+      
+        }
       }
     }
   }
 }
+

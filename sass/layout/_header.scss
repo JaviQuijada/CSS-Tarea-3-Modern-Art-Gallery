@@ -33,24 +33,24 @@ header.header_principal {
     background-blend-mode: normal;
 
     min-height: 123vh;
-    min-width: 113%;
+    min-width: 100%;
     margin-bottom: 90px;
   }
-    @include breakpoint(tabletvertical) {
+  @include breakpoint(tabletvertical) {
     background-image: url("../img/imagen1.png");
 
     background-color: #ffffff;
-    background-size: 55%;
+    background-size: 63%;
     background-position: top left;
     background-repeat: no-repeat;
     background-blend-mode: normal;
     min-height: 76vh;
-    min-width: 113%;
-    margin-bottom: 90px;
+    min-width: 100%;
+    margin-bottom: 36px;
   }
 
   @include breakpoint(mobile) {
-    width: 480px;
+    width: 100%;
     background-size: 500px;
     background-image: url("../img/imagen1.png");
     background-position-y: -177px;
@@ -88,18 +88,18 @@ header.header_principal {
         color: black;
         line-height: 76px;
         position: relative;
-        left: 587px;
-        top: 196px;
-        max-width: 57%;
-      }   
+        left: 513px;
+        top: 167px;
+        max-width: 64%;
+      }
       @include breakpoint(tabletvertical) {
         font-size: 64px;
         color: black;
         line-height: 76px;
         position: relative;
-        left: 433px;
+        left: 440px;
         top: 137px;
-        max-width: 70%;
+        max-width: 79%;
       }
 
       @include breakpoint(mobile) {
@@ -143,22 +143,20 @@ header.header_principal {
         line-height: 31px;
       }
       @include breakpoint(tablet) {
-        max-width: 67%;
+        max-width: 69%;
         position: relative;
-        left: 8px;
-        top: 432px;
-        font-size: 20px;
+        left: 0;
+        top: 388px;
+        font-size: 18px;
         line-height: 33px;
-  
-      }   
+      }
       @include breakpoint(tabletvertical) {
-        max-width: 73%;
+        max-width: 80%;
         position: relative;
-        left: 0px;
-        top: 334px;
+        left: 56px;
+        top: 346px;
         font-size: 16px;
         line-height: 25px;
-  
       }
       @include breakpoint(mobile) {
         max-width: 70%;
@@ -173,14 +171,15 @@ header.header_principal {
   }
 
   .location-link {
-    display: inline-flex;    text-decoration: none;
+    display: inline-flex;
+    text-decoration: none;
     height: 80px;
     max-width: 57%;
     position: relative;
     top: 315px;
     left: 1277px;
     @include breakpoint(desktop) {
-      max-width: 66%;
+      max-width: 62%;
       top: 267px;
       left: 976px;
     }
@@ -191,18 +190,19 @@ header.header_principal {
       max-height: 84%;
     }
     @include breakpoint(tablet) {
-      max-width: 77%;
+      max-width: 88%;
       position: relative;
-      top: 522px;
-      left: 589px;
-    }    
+      top: 443px;
+      left: 514px;
+    }
     @include breakpoint(tabletvertical) {
-      max-width: 81%;
+      max-width: 84%;
       max-height: 74%;
       position: relative;
-      top: 319px;
-      left: 432px;
+      top: 378px;
+      left: 443px;
     }
+
     @include breakpoint(mobile) {
       max-width: 67%;
       position: relative;
@@ -222,7 +222,7 @@ header.header_principal {
     font-family: $title-font;
     font-weight: 500;
     width: 50%;
-    letter-spacing:4px;
+    letter-spacing: 4px;
     @include breakpoint(desktop) {
       font-size: 23px;
     }
@@ -231,10 +231,11 @@ header.header_principal {
     }
     @include breakpoint(tablet) {
       font-size: 23px;
-    }  
+    }
     @include breakpoint(tabletvertical) {
-      font-size: 18px;
-      padding: 8px 8px;    }
+      font-size: 17px;
+      padding: 8px 8px;
+    }
   }
 
   .location-link .flecha {
@@ -247,7 +248,7 @@ header.header_principal {
   }
 
   .location-link:hover .flecha {
-    background-color: #a66f4f;
+    background-color: $orange;
   }
 
   .location-link:hover .text {

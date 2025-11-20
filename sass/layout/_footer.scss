@@ -63,6 +63,9 @@
   @include breakpoint(tablet) {
     height: 254px;
   }
+  @include breakpoint(tabletvertical) {
+  height: 178px;
+  }
 
   &_logo {
     width: 225px;
@@ -79,6 +82,10 @@
       width: 17%;
       margin-left: 100px;
       margin-top: 75px;
+    }
+    @include breakpoint(mobile) {
+      margin: 0;
+     
     }
   }
   &_parrafo {
@@ -109,6 +116,12 @@
       position: relative;
       bottom: 19px;
     }
+    @include breakpoint(tabletvertical) {
+      font-size: 14px;
+    }
+    @include breakpoint(mobile) {
+      height: 10%;
+    }
   }
   &_social {
     position: relative;
@@ -128,7 +141,6 @@
       width: 30px;
       @include breakpoint(tablet) {
         width: 17px;
-
       }
     }
   }
