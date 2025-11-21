@@ -2,6 +2,11 @@
 @use "../abstracts/mixins" as *;
 
 .hero {
+  @include breakpoint(mobile-xl) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   @include breakpoint(mobile) {
     display: flex;
     flex-direction: column;
@@ -24,12 +29,19 @@
       gap: 0;
       margin-bottom: 0px;
     }
-    @include breakpoint(mobile) {
-      justify-content: space-between;
-      width: 375px;
-      overflow-x: hidden;
-      flex-direction: column;
+    @include breakpoint(mobile-xl) {
+      display: block;
+      width: 100%;
       align-items: flex-start;
+      min-height: 0;
+      height: 531px;
+    }
+    @include breakpoint(mobile) {
+      display: block;
+      width: 100%;
+      align-items: flex-start;
+      min-height: 0;
+      height: 531px;
     }
 
     &-texto {
@@ -51,9 +63,15 @@
       @include breakpoint(tabletvertical) {
         max-width: 35%;
       }
+      @include breakpoint(mobile-xl) {
+        position: relative;
+        top: 335px;
+        max-width: 100%;
+      }
       @include breakpoint(mobile) {
         position: relative;
-        top: 252px;
+        top: 335px;
+        max-width: 100%;
       }
 
       &-title {
@@ -89,11 +107,25 @@
           font-weight: 900;
           margin-bottom: 31px;
         }
-        @include breakpoint(mobile) {
-          font-size: 25px;
+        @include breakpoint(mobile-xl) {
+          font-size: 50px;
           max-width: 100%;
-          bottom: 0;
-          line-height: 0;
+          width: 87%;
+          line-height: 48px;
+          font-weight: 900;
+          top: 0;
+          left: 0;
+          margin-bottom: 30px;
+        }
+        @include breakpoint(mobile) {
+          font-size: 50px;
+          max-width: 100%;
+          width: 87%;
+          line-height: 48px;
+          font-weight: 900;
+          top: 0;
+          left: 0;
+          margin-bottom: 30px;
         }
       }
       &-subtitle {
@@ -124,8 +156,23 @@
           max-width: 100%;
           position: relative;
         }
+        @include breakpoint(mobile-xl) {
+          font-size: 18px;
+          width: 100%;
+          max-width: 100%;
+          position: relative;
+          top: 0;
+          margin-left: 0;
+          text-align: left;
+        }
         @include breakpoint(mobile) {
-          font-size: 15px;
+          font-size: 18px;
+          width: 100%;
+          max-width: 100%;
+          position: relative;
+          top: 0;
+          margin-left: 0;
+          text-align: left;
         }
       }
     }
@@ -155,11 +202,26 @@
         object-position: 53%;
         margin-left: 65px;
       }
-      @include breakpoint(mobile) {
+      @include breakpoint(mobile-xl) {
+        display: flex;
         position: relative;
-        max-width: 100%;
+        bottom: 225px;
+        width: 100%;
+        height: 312px;
         object-fit: cover;
-        background-size: cover;
+
+        max-width: 100%;
+        margin-left: 0;
+      }
+      @include breakpoint(mobile) {
+        display: flex;
+        position: relative;
+        bottom: 225px;
+        width: 100%;
+        height: 312px;
+        object-fit: cover;
+
+        max-width: 100%;
         margin-left: 0;
       }
     }
@@ -185,6 +247,16 @@
       margin-bottom: 80px;
       max-height: 75vh;
     }
+    @include breakpoint(mobile-xl) {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+    @include breakpoint(mobile) {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
 
     &-banco {
       max-width: 50%;
@@ -204,6 +276,12 @@
       @include breakpoint(tabletvertical) {
         max-height: 62vh;
         min-width: 57%;
+      }
+      @include breakpoint(mobile-xl) {
+        max-width: 100%;
+      }
+      @include breakpoint(mobile) {
+        max-width: 100%;
       }
     }
 
@@ -229,12 +307,13 @@
 
         max-width: 14vh;
       }
+      @include breakpoint(mobile-xl) {
+        max-width: 100%;
+        display: block;
+      }
       @include breakpoint(mobile) {
-        height: 64vh;
-        left: 0;
-        top: 8px;
-
-        max-width: 27vh;
+        max-width: 100%;
+        display: block;
       }
 
       &-texto {
@@ -261,9 +340,19 @@
           position: relative;
           bottom: 27px;
         }
+        @include breakpoint(mobile-xl) {
+          max-width: 100%;
+          max-height: 100%;
+          width: 100%;
+          padding: 26px;
+          height: 300px;
+        }
         @include breakpoint(mobile) {
-          max-width: 10%;
-          max-height: 10%;
+          max-width: 100%;
+          max-height: 100%;
+          width: 100%;
+          padding: 26px;
+          height: 300px;
         }
 
         &-title {
@@ -280,6 +369,14 @@
             font-size: 54px;
           }
           @include breakpoint(tablet) {
+            font-size: 50px;
+          }
+          @include breakpoint(mobile-xl) {
+            width: 100%;
+            font-size: 50px;
+          }
+          @include breakpoint(mobile) {
+            width: 100%;
             font-size: 50px;
           }
         }
@@ -299,6 +396,16 @@
             font-weight: 100;
           }
           @include breakpoint(tabletvertical) {
+            max-width: 100%;
+          }
+          @include breakpoint(mobile-xl) {
+            width: 100%;
+            font-size: 18px;
+            max-width: 100%;
+          }
+          @include breakpoint(mobile) {
+            width: 100%;
+            font-size: 18px;
             max-width: 100%;
           }
         }
@@ -327,9 +434,13 @@
           top: 0;
           margin-bottom: 30px;
         }
+        @include breakpoint(mobile-xl) {
+          position: relative;
+          left: 0;
+        }
         @include breakpoint(mobile) {
           position: relative;
-          left: -171px;
+          left: 0;
         }
       }
     }

@@ -17,10 +17,14 @@ main.main_principal {
     margin-left: 51px;
   }
   
-
+  @include breakpoint(mobile-xl) {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: block;
+  }
   @include breakpoint(mobile) {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 20px;
+    margin-right: 20px;
     display: block;
   }
 }
