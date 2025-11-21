@@ -2,6 +2,11 @@
 @use "../abstracts/mixins" as *;
 
 .hero {
+  @include breakpoint(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
   &_container-1 {
     display: flex;
     align-items: center;
@@ -23,6 +28,8 @@
       justify-content: space-between;
       width: 375px;
       overflow-x: hidden;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     &-texto {
@@ -43,6 +50,10 @@
       }
       @include breakpoint(tabletvertical) {
         max-width: 35%;
+      }
+      @include breakpoint(mobile) {
+        position: relative;
+        top: 252px;
       }
 
       &-title {
@@ -69,7 +80,7 @@
           font-weight: 700;
           max-width: 100%;
           bottom: 49px;
-        }  
+        }
         @include breakpoint(tabletvertical) {
           font-size: 59px;
           line-height: 53px;
@@ -77,9 +88,13 @@
           bottom: 13px;
           font-weight: 900;
           margin-bottom: 31px;
-
         }
-
+        @include breakpoint(mobile) {
+          font-size: 25px;
+          max-width: 100%;
+          bottom: 0;
+          line-height: 0;
+        }
       }
       &-subtitle {
         font-family: $subtitle-font;
@@ -102,12 +117,15 @@
           max-width: 93%;
           position: relative;
           bottom: 20px;
-        }    
+        }
         @include breakpoint(tabletvertical) {
           font-size: 20px;
           line-height: 22px;
           max-width: 100%;
           position: relative;
+        }
+        @include breakpoint(mobile) {
+          font-size: 15px;
         }
       }
     }
@@ -129,7 +147,7 @@
         object-fit: cover;
         object-position: 53%;
         margin-left: 112px;
-      }   
+      }
       @include breakpoint(tabletvertical) {
         width: 372px;
         height: 372px;
@@ -139,13 +157,10 @@
       }
       @include breakpoint(mobile) {
         position: relative;
-        left: -331px;
-        top: -189px;
         max-width: 100%;
         object-fit: cover;
         background-size: cover;
         margin-left: 0;
-        max-width: 50%;
       }
     }
   }
@@ -157,7 +172,6 @@
     gap: 40px;
     margin-bottom: 200px;
     @include breakpoint(desktop) {
-         
     }
     @include breakpoint(smalldesktop) {
       gap: 0;
@@ -166,14 +180,11 @@
     @include breakpoint(tablet) {
       gap: 10px;
       margin-bottom: 100px;
-
     }
     @include breakpoint(tabletvertical) {
       margin-bottom: 80px;
       max-height: 75vh;
-
     }
-  
 
     &-banco {
       max-width: 50%;
@@ -192,17 +203,14 @@
       }
       @include breakpoint(tabletvertical) {
         max-height: 62vh;
-        min-width: 57%; 
-    
+        min-width: 57%;
       }
-   
     }
 
     &-block {
       max-width: 36%;
       @include breakpoint(desktop) {
         max-width: 34%;
-
       }
 
       @include breakpoint(smalldesktop) {
@@ -215,12 +223,18 @@
         left: 26px;
       }
       @include breakpoint(tabletvertical) {
+        height: 19vh;
+        left: 0;
+        top: 8px;
+
+        max-width: 14vh;
+      }
+      @include breakpoint(mobile) {
         height: 64vh;
         left: 0;
         top: 8px;
-     
+
         max-width: 27vh;
-     
       }
 
       &-texto {
@@ -240,13 +254,16 @@
         @include breakpoint(tablet) {
           max-height: 50%;
           padding: 90px 40px;
-
         }
         @include breakpoint(tabletvertical) {
           padding: 58px 27px;
           max-height: 60%;
           position: relative;
           bottom: 27px;
+        }
+        @include breakpoint(mobile) {
+          max-width: 10%;
+          max-height: 10%;
         }
 
         &-title {
@@ -309,11 +326,12 @@
           max-width: 30vh;
           top: 0;
           margin-bottom: 30px;
-          
-      
+        }
+        @include breakpoint(mobile) {
+          position: relative;
+          left: -171px;
         }
       }
     }
   }
 }
-
