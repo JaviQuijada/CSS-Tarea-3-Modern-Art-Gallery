@@ -16,6 +16,20 @@
     height: 277px;
   }
 }
+@media (max-width: 375px) and (min-width: 320px) {
+  .localitation {
+    display: block;
+    padding: 42px 28px 37px 28px;
+    height: auto;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  .localitation {
+    display: block;
+    padding: 42px 28px 37px 28px;
+    height: auto;
+  }
+}
 .localitation_logo {
   margin-left: 200px;
   margin-top: 120px;
@@ -27,12 +41,46 @@
     margin-top: 100px;
   }
 }
+@media (max-width: 375px) and (min-width: 320px) {
+  .localitation_logo {
+    margin: 0;
+    margin-bottom: 31px;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  .localitation_logo {
+    margin: 0;
+    margin-bottom: 31px;
+  }
+}
+@media (max-width: 375px) and (min-width: 320px) {
+  .localitation_logo img {
+    width: 45%;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  .localitation_logo img {
+    width: 45%;
+  }
+}
 .localitation_parrafo {
   font-family: "Outfit", sans-serif;
   font-size: 28px;
   max-width: 34%;
   margin-top: 120px;
   margin-right: 350px;
+}
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .localitation_parrafo {
+    margin: 0;
+    max-width: 100%;
+    width: 38%;
+    font-size: 20px;
+    line-height: 32px;
+    position: relative;
+    top: 120px;
+    right: 118px;
+  }
 }
 @media (max-width: 1024px) and (min-width: 767px) {
   .localitation_parrafo {
@@ -44,16 +92,54 @@
     max-width: 27%;
   }
 }
+@media (max-width: 375px) and (min-width: 320px) {
+  .localitation_parrafo {
+    margin: 0;
+    font-size: 16px;
+    max-width: 100%;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  .localitation_parrafo {
+    margin: 0;
+    font-size: 16px;
+    max-width: 100%;
+    font-weight: 300;
+    line-height: 26px;
+    margin-bottom: 40px;
+  }
+}
 .localitation_social {
   position: relative;
   right: 200px;
   top: 150px;
   height: 100px;
 }
+@media (max-width: 1280px) and (min-width: 1025px) {
+  .localitation_social {
+    top: 119px;
+    right: 89px;
+  }
+}
 @media (max-width: 1024px) and (min-width: 767px) {
   .localitation_social {
     right: 70px;
     top: 94px;
+  }
+}
+@media (max-width: 375px) and (min-width: 320px) {
+  .localitation_social {
+    left: 0;
+    top: 0;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  .localitation_social {
+    left: 0;
+    top: 0;
   }
 }
 .localitation_social ul {
@@ -82,7 +168,13 @@
 }
 @media (max-width: 768px) and (min-width: 415px) {
   .footer-principal {
-    height: 178px;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 0;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -132,6 +224,15 @@
     margin-top: 75px;
   }
 }
+@media (max-width: 768px) and (min-width: 415px) {
+  .footer-principal_logo {
+    width: 90%;
+    height: auto;
+    margin-left: 36px;
+    padding: 12px;
+    margin-top: 40px;
+  }
+}
 @media (max-width: 414px) and (min-width: 376px) {
   .footer-principal_logo {
     max-width: 100%;
@@ -144,6 +245,11 @@
     max-width: 100%;
     margin: 0;
     margin-bottom: 30px;
+  }
+}
+@media (max-width: 768px) and (min-width: 415px) {
+  .footer-principal_logo img {
+    width: 100%;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -193,7 +299,14 @@
 }
 @media (max-width: 768px) and (min-width: 415px) {
   .footer-principal_parrafo {
-    font-size: 14px;
+    font-size: 16px;
+    margin: 0px 0px 20px;
+    top: 0;
+    max-width: 100%;
+    width: 260px;
+    line-height: 28px;
+    margin-bottom: 50px;
+    margin-top: 50px;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -225,6 +338,15 @@
 @media (max-width: 1024px) and (min-width: 767px) {
   .footer-principal_social {
     right: 100px;
+  }
+}
+@media (max-width: 768px) and (min-width: 415px) {
+  .footer-principal_social {
+    right: 0;
+    top: 27px;
+    width: 52%;
+    margin-top: 29px;
+    margin-left: 48px;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -435,11 +557,12 @@ header.header_principal .header_principal-text-title {
   header.header_principal .header_principal-text-title {
     font-size: 64px;
     color: black;
-    line-height: 76px;
+    line-height: 61px;
     position: relative;
     left: 440px;
     top: 137px;
-    max-width: 79%;
+    max-width: 100%;
+    width: 79%;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -556,7 +679,6 @@ header.header_principal .location-link {
     top: 250px;
     left: 848px;
     max-width: 63%;
-    max-height: 84%;
   }
 }
 @media (max-width: 1024px) and (min-width: 767px) {
@@ -667,6 +789,23 @@ header.header_principal .location-link:hover .text {
   max-width: 100%;
   height: 900px;
 }
+@media (max-width: 768px) and (min-width: 415px) {
+  .header_maps {
+    height: 700px;
+  }
+}
+@media (max-width: 375px) and (min-width: 320px) {
+  .header_maps {
+    max-width: 100%;
+    height: 811px;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  .header_maps {
+    max-width: 100%;
+    height: 811px;
+  }
+}
 
 .map-container {
   position: relative;
@@ -705,7 +844,18 @@ header.header_principal .location-link:hover .text {
   cursor: pointer;
   overflow: hidden;
   height: 60px;
-  border-radius: 2px;
+  position: relative;
+  left: 324px;
+}
+@media (max-width: 375px) and (min-width: 320px) {
+  .map-container .localitation-link {
+    left: 0;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  .map-container .localitation-link {
+    left: 0;
+  }
 }
 .map-container .localitation-link .text {
   background-color: #000;
@@ -717,10 +867,6 @@ header.header_principal .location-link:hover .text {
   justify-content: center;
   font-size: 16px;
   font-family: "Big Shoulders", sans-serif;
-}
-.map-container .localitation-link {
-  position: relative;
-  left: 324px;
 }
 .map-container .localitation-link .flecha {
   background-color: #d5966c;
@@ -772,6 +918,11 @@ header.header_principal .location-link:hover .text {
     top: 0;
     gap: 0;
     margin-bottom: 0px;
+  }
+}
+@media (max-width: 768px) and (min-width: 415px) {
+  .hero_container-1 {
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -988,7 +1139,7 @@ header.header_principal .location-link:hover .text {
     height: 372px;
     object-fit: cover;
     object-position: 53%;
-    margin-left: 65px;
+    margin-left: 93px;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -1037,7 +1188,9 @@ header.header_principal .location-link:hover .text {
 @media (max-width: 768px) and (min-width: 415px) {
   .hero_container-2 {
     margin-bottom: 80px;
-    max-height: 75vh;
+    max-height: 100%;
+    max-width: 100%;
+    justify-content: start;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -1078,8 +1231,11 @@ header.header_principal .location-link:hover .text {
 }
 @media (max-width: 768px) and (min-width: 415px) {
   .hero_container-2-banco {
-    max-height: 62vh;
-    min-width: 57%;
+    max-height: 100%;
+    min-width: 0;
+    max-width: 100%;
+    width: 406px;
+    height: 675px;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -1115,10 +1271,11 @@ header.header_principal .location-link:hover .text {
 }
 @media (max-width: 768px) and (min-width: 415px) {
   .hero_container-2-block {
-    height: 19vh;
+    height: 100%;
     left: 0;
-    top: 8px;
-    max-width: 14vh;
+    top: 0;
+    max-width: 100%;
+    width: 302px;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -1161,9 +1318,10 @@ header.header_principal .location-link:hover .text {
 @media (max-width: 768px) and (min-width: 415px) {
   .hero_container-2-block-texto {
     padding: 58px 27px;
-    max-height: 60%;
-    position: relative;
-    bottom: 27px;
+    max-width: 100%;
+    max-height: 100%;
+    height: 401px;
+    width: 302px;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -1244,6 +1402,7 @@ header.header_principal .location-link:hover .text {
 @media (max-width: 768px) and (min-width: 415px) {
   .hero_container-2-block-texto-subtitle {
     max-width: 100%;
+    width: 87%;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -1287,10 +1446,12 @@ header.header_principal .location-link:hover .text {
 }
 @media (max-width: 768px) and (min-width: 415px) {
   .hero_container-2-block-pasillo {
-    max-height: 23vh;
-    max-width: 30vh;
+    max-height: 100%;
+    max-width: 100%;
+    width: 302px;
+    height: 262px;
     top: 0;
-    margin-bottom: 30px;
+    margin-bottom: 7px;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -1327,7 +1488,8 @@ main.main_principal {
 }
 @media (max-width: 768px) and (min-width: 415px) {
   main.main_principal {
-    margin-left: 51px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
 }
 @media (max-width: 414px) and (min-width: 376px) {
@@ -1347,17 +1509,52 @@ main.main_principal {
 
 main.main_maps {
   background-color: black;
-  position: relative;
   width: 100%;
   height: 760px;
-  aspect-ratio: 16/9;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 @media (max-width: 1024px) and (min-width: 767px) {
   main.main_maps {
     height: 600px;
   }
+}
+@media (max-width: 375px) and (min-width: 320px) {
+  main.main_maps {
+    height: 510px;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  main.main_maps {
+    height: 510px;
+  }
+}
+@media (max-width: 1440px) and (min-width: 1281px) {
+  main.main_maps .localitation-container h3,
+  main.main_maps .localitation-container p {
+    position: relative;
+    left: 759px;
+    bottom: 226px;
+  }
+}
+@media (max-width: 1280px) and (min-width: 1025px) {
+  main.main_maps .localitation-container h3,
+  main.main_maps .localitation-container p {
+    position: relative;
+    left: 759px;
+    bottom: 226px;
+  }
+}
+@media (max-width: 768px) and (min-width: 415px) {
+  main.main_maps .localitation-container h3,
+  main.main_maps .localitation-container p {
+    top: 0;
+    right: 89px;
+  }
+}
+main.main_maps .localitation-container {
+  display: block;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 main.main_maps h1 {
   color: rgb(255, 255, 255);
@@ -1369,12 +1566,42 @@ main.main_maps h1 {
   margin-top: 144px;
   margin-left: 230px;
 }
+@media (max-width: 1440px) and (min-width: 1281px) {
+  main.main_maps h1 {
+    font-size: 80px;
+    margin: 207px 0px 0px 214px;
+  }
+}
+@media (max-width: 1280px) and (min-width: 1025px) {
+  main.main_maps h1 {
+    font-size: 80px;
+    margin: 207px 0px 0px 214px;
+  }
+}
 @media (max-width: 1024px) and (min-width: 767px) {
   main.main_maps h1 {
     font-size: 70px;
     margin-top: 144px;
     margin-left: 80px;
     line-height: 78px;
+  }
+}
+@media (max-width: 375px) and (min-width: 320px) {
+  main.main_maps h1 {
+    font-size: 50px;
+    line-height: 0;
+    margin: 73px 0px 0px 0px;
+    max-width: 100%;
+    position: relative;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  main.main_maps h1 {
+    font-size: 50px;
+    line-height: 0;
+    margin: 73px 0px 0px 0px;
+    max-width: 100%;
+    position: relative;
   }
 }
 main.main_maps h3 {
@@ -1385,11 +1612,44 @@ main.main_maps h3 {
   margin-top: -244px;
   margin-left: 1000px;
 }
+@media (max-width: 1440px) and (min-width: 1281px) {
+  main.main_maps h3 {
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1280px) and (min-width: 1025px) {
+  main.main_maps h3 {
+    margin: 0;
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+}
 @media (max-width: 1024px) and (min-width: 767px) {
   main.main_maps h3 {
     font-size: 50px;
     margin-top: -165px;
     margin-left: 450px;
+  }
+}
+@media (max-width: 768px) and (min-width: 415px) {
+  main.main_maps h3 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 375px) and (min-width: 320px) {
+  main.main_maps h3 {
+    margin: 0;
+    font-size: 35px;
+    margin: 56px 0px 0px 0px;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  main.main_maps h3 {
+    margin: 0;
+    font-size: 35px;
+    margin: 56px 0px 0px 0px;
   }
 }
 main.main_maps p.address {
@@ -1402,12 +1662,40 @@ main.main_maps p.address {
   margin-top: 34px;
   margin-left: 1000px;
 }
+@media (max-width: 1440px) and (min-width: 1281px) {
+  main.main_maps p.address {
+    margin: 0;
+    font-size: 20px;
+    line-height: 42px;
+  }
+}
+@media (max-width: 1280px) and (min-width: 1025px) {
+  main.main_maps p.address {
+    margin: 0;
+    font-size: 20px;
+    line-height: 42px;
+  }
+}
 @media (max-width: 1024px) and (min-width: 767px) {
   main.main_maps p.address {
     font-size: 20px;
     line-height: 29px;
     margin-top: 34px;
     margin-left: 450px;
+  }
+}
+@media (max-width: 375px) and (min-width: 320px) {
+  main.main_maps p.address {
+    margin: 20px 0px 0px 0px;
+    font-size: 18px;
+    line-height: 25px;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  main.main_maps p.address {
+    margin: 20px 0px 0px 0px;
+    font-size: 18px;
+    line-height: 25px;
   }
 }
 main.main_maps p.description {
@@ -1421,6 +1709,19 @@ main.main_maps p.description {
   margin-top: 34px;
   margin-left: 1000px;
 }
+@media (max-width: 1440px) and (min-width: 1281px) {
+  main.main_maps p.description {
+    margin-left: 0;
+    font-size: 20px;
+  }
+}
+@media (max-width: 1280px) and (min-width: 1025px) {
+  main.main_maps p.description {
+    margin-left: 0;
+    font-size: 20px;
+    line-height: 38px;
+  }
+}
 @media (max-width: 1024px) and (min-width: 767px) {
   main.main_maps p.description {
     font-size: 20px;
@@ -1428,6 +1729,29 @@ main.main_maps p.description {
     margin-left: 450px;
     max-width: 43%;
     line-height: 30px;
+  }
+}
+@media (max-width: 768px) and (min-width: 415px) {
+  main.main_maps p.description {
+    max-width: 100%;
+    width: 50%;
+    font-size: 17px;
+  }
+}
+@media (max-width: 375px) and (min-width: 320px) {
+  main.main_maps p.description {
+    margin: 50px 0px 0px 0px;
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 100%;
+  }
+}
+@media (max-width: 414px) and (min-width: 376px) {
+  main.main_maps p.description {
+    margin: 50px 0px 0px 0px;
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 100%;
   }
 }
 

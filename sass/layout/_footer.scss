@@ -9,6 +9,17 @@
   @include breakpoint(tablet) {
     height: 277px;
   }
+  @include breakpoint(mobile) {
+    display: block;
+    padding: 42px 28px 37px 28px;
+    height: auto;
+  } 
+  @include breakpoint(mobile-xl) {
+    display: block;
+    padding: 42px 28px 37px 28px;
+    height: auto;
+  }
+
   &_logo {
     margin-left: 200px;
     margin-top: 120px;
@@ -17,6 +28,23 @@
       margin-left: 75px;
       margin-top: 100px;
     }
+    @include breakpoint(mobile) {
+      margin: 0;
+      margin-bottom: 31px;
+    } 
+     @include breakpoint(mobile-xl) {
+      margin: 0;
+      margin-bottom: 31px;
+    }
+    img {
+      @include breakpoint(mobile) {
+        width: 45%;
+      } 
+      @include breakpoint(mobile-xl) {
+        width: 45%;
+      }
+    }
+
   }
   &_parrafo {
     font-family: $subtitle-font;
@@ -24,6 +52,16 @@
     max-width: 34%;
     margin-top: 120px;
     margin-right: 350px;
+    @include breakpoint(smalldesktop) {
+      margin: 0;
+      max-width: 100%;
+      width: 38%;
+      font-size: 20px;
+      line-height: 32px;
+      position: relative;
+      top: 120px;
+      right: 118px;
+    }
     @include breakpoint(tablet) {
       font-size: 16px;
       margin-left: -191px;
@@ -32,16 +70,46 @@
       margin-right: 00px;
       max-width: 27%;
     }
+    @include breakpoint(mobile) {
+      margin: 0;
+      font-size: 16px;
+      max-width: 100%;
+      font-weight: 300;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+    @include breakpoint(mobile-xl) {
+      margin: 0;
+      font-size: 16px;
+      max-width: 100%;
+      font-weight: 300;
+      line-height: 26px;
+      margin-bottom: 40px;
+    }
+
   }
   &_social {
     position: relative;
     right: 200px;
     top: 150px;
     height: 100px;
+    @include breakpoint(smalldesktop) {
+      top: 119px;
+      right: 89px;
+    }
     @include breakpoint(tablet) {
       right: 70px;
       top: 94px;
     }
+    @include breakpoint(mobile) {
+      left: 0;
+      top: 0;
+    } 
+    @include breakpoint(mobile-xl) {
+      left: 0;
+      top: 0;
+    }
+    
     ul {
       display: flex;
       flex-direction: row;
@@ -64,7 +132,13 @@
     height: 254px;
   }
   @include breakpoint(tabletvertical) {
-    height: 178px;
+    max-width: 100%;
+    max-height: 100%;
+    min-height: 0;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 50px;
   }
   @include breakpoint(mobile-xl) {
     display: block;
@@ -103,6 +177,13 @@
       margin-left: 100px;
       margin-top: 75px;
     }
+    @include breakpoint(tabletvertical) {
+      width: 90%;
+      height: auto;
+      margin-left: 36px;
+      padding: 12px;
+      margin-top: 40px;
+    }
     @include breakpoint(mobile-xl) {
       max-width: 100%;
       margin: 0;
@@ -114,6 +195,9 @@
       margin-bottom: 30px;
     }
     img {
+      @include breakpoint(tabletvertical) {
+        width: 100%;
+      }
       @include breakpoint(mobile-xl) {
         width: 100px;
       }
@@ -151,7 +235,14 @@
       bottom: 19px;
     }
     @include breakpoint(tabletvertical) {
-      font-size: 14px;
+      font-size: 16px;
+      margin: 0px 0px 20px;
+      top: 0;
+      max-width: 100%;
+      width: 260px;
+      line-height: 28px;
+      margin-bottom: 50px;
+      margin-top: 50px;
     }
     @include breakpoint(mobile-xl) {
       max-width: 100%;
@@ -177,6 +268,13 @@
     height: 100px;
     @include breakpoint(tablet) {
       right: 100px;
+    }
+    @include breakpoint(tabletvertical) {
+      right: 0;
+      top: 27px;
+      width: 52%;
+      margin-top: 29px;
+      margin-left: 48px;
     }
     @include breakpoint(mobile-xl) {
       top: 0;

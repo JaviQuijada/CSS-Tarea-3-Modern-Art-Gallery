@@ -6,17 +6,18 @@ main.main_principal {
   @include breakpoint(smalldesktop) {
     margin-left: 112px;
   }
-   @include breakpoint(desktop) {
-     margin-left: 100px;
+  @include breakpoint(desktop) {
+    margin-left: 100px;
   }
   @include breakpoint(tablet) {
     margin-left: 79px;
     max-width: 100%;
   }
   @include breakpoint(tabletvertical) {
-    margin-left: 51px;
+    margin-left: 25px;
+    margin-right: 25px;
   }
-  
+
   @include breakpoint(mobile-xl) {
     margin-left: 20px;
     margin-right: 20px;
@@ -31,14 +32,42 @@ main.main_principal {
 
 main.main_maps {
   background-color: black;
-  position: relative;
   width: 100%;
   height: 760px;
-  aspect-ratio: 16 / 9;
   overflow: hidden;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   @include breakpoint(tablet) {
     height: 600px;
+  }
+  @include breakpoint(mobile) {
+    height: 510px;
+  }  
+  @include breakpoint(mobile-xl) {
+    height: 510px;
+  }
+
+  .localitation-container h3,
+  .localitation-container p {
+    @include breakpoint(desktop) {
+      position: relative;
+      left: 759px;
+      bottom: 226px;
+    }   
+    @include breakpoint(smalldesktop) {
+      position: relative;
+      left: 759px;
+      bottom: 226px;
+    }
+    @include breakpoint(tabletvertical) {
+      top: 0;
+      right: 89px;
+    }
+
+  }
+
+  .localitation-container {
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
   }
 
   h1 {
@@ -50,12 +79,34 @@ main.main_maps {
     position: relative;
     margin-top: 144px;
     margin-left: 230px;
+    @include breakpoint(desktop) {
+      font-size: 80px;
+      margin: 207px 0px 0px 214px;
+    }
+    @include breakpoint(smalldesktop) {
+      font-size: 80px;
+      margin: 207px 0px 0px 214px;    }
     @include breakpoint(tablet) {
       font-size: 70px;
       margin-top: 144px;
       margin-left: 80px;
       line-height: 78px;
     }
+    @include breakpoint(mobile) {
+      font-size: 50px;
+      line-height: 0;
+      margin: 73px 0px 0px 0px;      
+      max-width: 100%;
+      position: relative;    
+    } 
+    @include breakpoint(mobile-xl) {
+      font-size: 50px;
+      line-height: 0;
+      margin: 73px 0px 0px 0px;      
+      max-width: 100%;
+      position: relative;    
+    }
+
   }
   h3 {
     font-size: 55px;
@@ -64,11 +115,35 @@ main.main_maps {
     position: relative;
     margin-top: -244px;
     margin-left: 1000px;
+    @include breakpoint(desktop) {
+      margin: 0;
+      font-size: 40px;
+      margin-bottom: 20px;
+    } 
+    @include breakpoint(smalldesktop) {
+      margin: 0;
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
     @include breakpoint(tablet) {
       font-size: 50px;
       margin-top: -165px;
       margin-left: 450px;
     }
+    @include breakpoint(tabletvertical) {
+      font-size: 36px;
+    }
+    @include breakpoint(mobile) {
+      margin: 0;
+      font-size: 35px;
+      margin: 56px 0px 0px 0px;
+    }    
+    @include breakpoint(mobile-xl) {
+      margin: 0;
+      font-size: 35px;
+      margin: 56px 0px 0px 0px;
+    }
+   
   }
   p.address {
     font-family: $subtitle-font;
@@ -79,12 +154,33 @@ main.main_maps {
     position: relative;
     margin-top: 34px;
     margin-left: 1000px;
+    @include breakpoint(desktop) {
+      margin: 0;
+      font-size: 20px;
+      line-height: 42px;
+    }   
+    @include breakpoint(smalldesktop) {
+      margin: 0;
+      font-size: 20px;
+      line-height: 42px;
+    }
     @include breakpoint(tablet) {
       font-size: 20px;
       line-height: 29px;
       margin-top: 34px;
       margin-left: 450px;
     }
+    @include breakpoint(mobile) {
+      margin: 20px 0px 0px 0px;      
+      font-size: 18px;
+      line-height: 25px;
+    }   
+    @include breakpoint(mobile-xl) {
+      margin: 20px 0px 0px 0px;      
+      font-size: 18px;
+      line-height: 25px;
+    }
+
   }
 
   p.description {
@@ -97,12 +193,39 @@ main.main_maps {
     position: relative;
     margin-top: 34px;
     margin-left: 1000px;
+    @include breakpoint(desktop) {
+      margin-left: 0;
+      font-size: 20px;
+    }   
+    @include breakpoint(smalldesktop) {
+      margin-left: 0;
+      font-size: 20px;
+      line-height: 38px;
+
+    }
     @include breakpoint(tablet) {
       font-size: 20px;
       margin-top: 34px;
       margin-left: 450px;
       max-width: 43%;
       line-height: 30px;
+    }
+    @include breakpoint(tabletvertical) {
+      max-width: 100%;
+      width: 50%;
+      font-size: 17px;
+    }
+    @include breakpoint(mobile) {
+      margin: 50px 0px 0px 0px;
+      font-size: 18px;
+      line-height: 30px;
+      max-width: 100%;
+    }
+    @include breakpoint(mobile-xl) {
+      margin: 50px 0px 0px 0px;
+      font-size: 18px;
+      line-height: 30px;
+      max-width: 100%;
     }
   }
 }
